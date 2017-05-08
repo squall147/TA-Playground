@@ -8,5 +8,48 @@
     <artifactId>TA-Playground</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+
+        <dependencies.selenium.version>3.3.1</dependencies.selenium.version>
+        <dependencies.appium.version>4.1.2</dependencies.appium.version>
+        <dependencies.fluentlenium.version>3.1.1</dependencies.fluentlenium.version>
+    </properties>
+
+    <dependencies>
+        <!--selenium dependency-->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${dependencies.selenium.version}</version>
+        </dependency>
+
+        <!--Appium dependency without selenium-->
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>${dependencies.appium.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.seleniumhq.selenium</groupId>
+                    <artifactId>selenium-java</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--Fluentlenium dependency-->
+        <dependency>
+            <groupId>org.fluentlenium</groupId>
+            <artifactId>fluentlenium-core</artifactId>
+            <version>${dependencies.fluentlenium.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.fluentlenium</groupId>
+            <artifactId>fluentlenium-junit</artifactId>
+            <version>${dependencies.fluentlenium.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>
