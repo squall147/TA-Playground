@@ -11,7 +11,7 @@ import java.util.Map;
 public class ChromeDriverCreator {
 
     static DesiredCapabilities capabilities;
-    static String DeviceName = "Apple iPhone 5";
+    static String deviceName = Devices.SAMSUNG_GALAXY_NOTE_3.getDeviceName();
 
     public static WebDriver createDriver() {
         return createChromeDriver();
@@ -20,7 +20,7 @@ public class ChromeDriverCreator {
     private static WebDriver createChromeDriver() {
         System.setProperty("webdriver.chrome.driver", ChromeDriverExecutor.getProperDriverExecutable());
         Map<String, String> mobileEmulation = new HashMap<String, String>();
-        mobileEmulation.put("deviceName", DeviceName);
+        mobileEmulation.put("deviceName", deviceName);
 
         Map<String, Object> chromeOptions = new HashMap<String, Object>();
         chromeOptions.put("mobileEmulation", mobileEmulation);
