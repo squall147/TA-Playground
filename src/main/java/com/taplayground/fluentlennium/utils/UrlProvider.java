@@ -2,7 +2,7 @@ package com.taplayground.fluentlennium.utils;
 
 public enum UrlProvider {
 
-    SPORTSBOOK_COM("https://mobile-%s.tipdev.com");
+    SPORTSBOOK_COM("https://mobile-%s-de.tipdev.com/?classicView=true");
 
     private static final String ENVIRONMENT = "staging";
 
