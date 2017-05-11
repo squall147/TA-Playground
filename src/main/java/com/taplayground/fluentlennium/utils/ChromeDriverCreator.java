@@ -11,7 +11,7 @@ import java.util.Map;
 public class ChromeDriverCreator {
 
     static DesiredCapabilities capabilities;
-    static String deviceName = Devices.SAMSUNG_GALAXY_NOTE_3.getDeviceName();
+    static String deviceName = String.valueOf(Devices.SAMSUNG_GALAXY_S4);
 
     public static WebDriver createDriver() {
         return createChromeDriver();
