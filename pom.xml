@@ -77,6 +77,13 @@
             <artifactId>fluentlenium-junit</artifactId>
             <version>${dependencies.fluentlenium.version}</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+        </dependency>
     </dependencies>
 
 </project>
